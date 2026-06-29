@@ -1,3 +1,5 @@
+//task 03
+
 import java.util.Scanner;
 public class t3 {
     public static void main(String[] args){
