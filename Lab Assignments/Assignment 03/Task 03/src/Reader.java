@@ -1,5 +1,4 @@
-import javax.xml.transform.Source;
-
+//Task 03
 public class Reader {
     public String name;
     public int cap;
@@ -9,9 +8,10 @@ public class Reader {
         name=s;
         cap=a;
         book=new String[cap];
+        System.out.println("A new reader is created!");
     }
     public Reader(String s){
-        Reader(s,2);
+        this(s,2);
     }
     public void addBook(String s){
         if(num<cap){
@@ -23,7 +23,12 @@ public class Reader {
     }
     public void updateCapacity(int a ){
         cap=a;
-        book=new String[cap];
+        String[] newbook=new String[a];
+        for(int i=0;i<num;i++){
+            newbook[i]=book[i];
+        }
+        book=newbook;
+        System.out.println("Capacity has changed to "+a);
     }
     public void readerInfo(){
         System.out.println("Name: "+name);
@@ -34,7 +39,10 @@ public class Reader {
             if (!book[i].equals("null")) {
                 found=false;
             }
-            System.out.println("Book "+i+": "+book[i]);
+            System.out.println("Book "+(i+1)+": "+book[i]);
+        }
+        if(found==true){
+            System.out.println("No books added yet");
         }
     }
 }
