@@ -1,3 +1,5 @@
+//Task 02
+
 public class PlatinumCard extends CreditCard {
     public int point=100;
     public PlatinumCard(String cardHolder, String accountNo){
